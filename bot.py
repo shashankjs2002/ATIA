@@ -40,7 +40,7 @@ client = commands.Bot(intents=discord.Intents.all() ,command_prefix= '.')
 @client.event
 async def on_ready():
     print('Bot is ready')
-    await client.change_presence(status=discord.Status.full_form, activity=discord.CustomActivity(name='Custom Status',emoji='🙃', state = 'dfg'))
+    #await client.change_presence(status=discord.Status.full_form, activity=discord.CustomActivity(name='Custom Status',emoji='🙃', state = 'dfg'))
     # await client.change_presence(activity= discord.Activity(name="Test",type=-1, details= 'jj', state = 'state'))
     print('client', client.user)
 
@@ -60,7 +60,7 @@ async def on_message(message):
     if(checkmsg.startswith('!atia ') and message.author !=  client.user):
         # print(message.content[6:])
         
-        res = generate_response(message.content)
+        res = generate_response(message.content[6:])
         # print(res)
         await message.channel.send(res)
     # for greet in greets:
