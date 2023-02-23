@@ -63,10 +63,10 @@ async def on_message(message):
     if(checkmsg.startswith('!atia ') and message.author !=  client.user):
         # print(message.content[6:])
         
-        if(("your" in msg) and ("name" in msg) ):
-          await message.channel.send("My name is ATIA(Advanced Thinking and Intelligent Assistance).")
-        elif(("your" in msg) and ("developer" or "creator" in msg) ):
-          await message.channel.send("This discord chat-bot is developed by Shashank J..")
+#         if(("your" in msg) and ("name" in msg) ):
+#           await message.channel.send("My name is ATIA(Advanced Thinking and Intelligent Assistance).")
+#         elif(("your" in msg) and ("developer" or "creator" in msg) ):
+#           await message.channel.send("This discord chat-bot is developed by Shashank J..")
         else:
           res = generate_response(message.content)
           print(res)
