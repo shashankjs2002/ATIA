@@ -67,7 +67,7 @@ async def on_message(message):
 #           await message.channel.send("My name is ATIA(Advanced Thinking and Intelligent Assistance).")
 #         elif(("your" in msg) and ("developer" or "creator" in msg) ):
 #           await message.channel.send("This discord chat-bot is developed by Shashank J..")
-        else:
+#         else:
           res = generate_response(message.content)
           print(res)
           await message.channel.send(res)
